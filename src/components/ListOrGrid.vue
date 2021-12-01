@@ -132,7 +132,6 @@ export default {
 
 .chkHolder{
   text-align: right;
-  
 }
 .flex-container{
   display: flex;
@@ -140,9 +139,7 @@ export default {
   height: 16rem;
   flex-direction: column;
   min-height: 100%;
-  
 }
-
 .flex-row{
   display: flex;
   border: 1px solid black;
@@ -163,11 +160,9 @@ export default {
   min-height: 3rem;
   text-align: left;
 }
-
 img{
 width: 100%;
 }
-
 li{
   text-align: left;
 }

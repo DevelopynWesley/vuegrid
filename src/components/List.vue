@@ -1,6 +1,6 @@
 <template>
   <div class="List">
-     <tr class="grid_row">
+     <tr class="grid-row">
         
             <td class="grid_col">
 
@@ -67,17 +67,17 @@ export default {
      }
   },
 
-   methods: {
-      checkForm() {
-                this.visible = true;
+  methods: {
+    checkForm() {
+      this.visible = true;
+      },
 
-            },
       delListItem(id){
         let index = this.names.map(id => id.nameId).indexOf(id)
         this.$root.$data.shared.splice(index, 1)
       },
 
-       updateData(variable) {
+      updateData(variable) {
 
         this.newName[0].nameId = 2323;
         this.newName[0].firstName = variable[0];
@@ -90,7 +90,7 @@ export default {
 
        let vari = variable;
        console.log(vari);
-    }
+      } 
   },
 
    watch: {
@@ -99,7 +99,6 @@ export default {
       console.log("watched");
     }
   }
- 
 }
 </script>
 
@@ -116,7 +115,7 @@ export default {
   margin: 0;
   padding: 0;
 }
-.grid_row{
+.grid-row{
   height: 5rem;
 }
 </style>

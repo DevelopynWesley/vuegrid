@@ -8,13 +8,7 @@
 <script>
 
 export default {
-  name: 'NameList',
-
-  components: {
-
-
-  },
-
+  name: 'Clock',
   props: {
     namesprop: {
       f_name: String,
@@ -26,13 +20,14 @@ export default {
    methods: {
       checkForm() {
                 this.visible = true;
+      },
 
-            },
       delListItem(id){
         let index = this.names.map(id => id.nameId).indexOf(id)
         this.names.splice(index, 1)
       },
   },
+
   data: function(){
      return {
          time: null,
@@ -78,7 +73,5 @@ export default {
  
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 </style>

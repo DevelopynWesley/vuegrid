@@ -1,15 +1,17 @@
 <template>
+
   <div class="List">
 
     <p>First Name:</p><input type="text" id="firstNameInput" v-model="newFirstName">
     <p>Last Name:</p><input id="lastNameInput" value="bar" v-model="newLastName">
     <p>Age:</p><input id="ageInput" type="number" value="27" v-model="newAge">
       
-      <br>
+    <br>
 
-      <button class="listAddButton" @click="addRecord()">ADD RECORD</button>
+    <button class="listAddButton" @click="addRecord()">ADD RECORD</button>
       
   </div>
+
 </template>
 
 <script>
@@ -27,7 +29,6 @@ export default {
 
         this.names.push(this.newName[0]);
         this.$root.$data.shared.push(this.newName[0]);
-
       }
   },
   data: function(){
