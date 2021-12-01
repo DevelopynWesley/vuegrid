@@ -60,25 +60,16 @@
               <li class = "nameLi" v-bind:key="game.gameId" v-for="game in games" >{{game.gameName}}
               </li>     
             </ul>
+    </div>
+
   </div>
-  </div>
+
 </template>
 
 <script>
 export default {
   name: 'ListOrGrid',
-
-  components: {
   
-  },
-
-  computed:{
-
-  },
-
-   methods: {
-      
-  },
   data: function(){
      return {
          visible: true,
