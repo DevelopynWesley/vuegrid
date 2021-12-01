@@ -67,11 +67,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
-
-body {
-    border: 3px solid black;
-}
 .List{
     justify-content: center;
     padding: 0.5rem;

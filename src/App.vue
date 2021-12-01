@@ -77,7 +77,6 @@ export default {
   color: #2c3e50;
   width: 21rem;  
 }
-
 .main_table{
   min-height: 33%;
 }

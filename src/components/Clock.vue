@@ -81,49 +81,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-
-body {
-    border: 3px solid black;
-}
-.List{
-    border: 3px solid black;
-    justify-content: center;
-    padding: 0.5rem;
-    
-}
-.texter{
-    text-align: center;
-    width: 10rem;
-}
-
-.successBox{
-    background: chartreuse;
-    border: 1px solid black;
-    width: 50%
-}
-.listNames{
-  display: grid;
-  padding: 0%;
-  margin: 0%;
-}
-.nameLi{
-  border: 1px solid black;
-  margin: 0%;
-  padding: 0%;
-}
-
 </style>

@@ -55,7 +55,6 @@ export default {
 
   },
 
-
   data: function(){
      return {
       chkShoes: true,

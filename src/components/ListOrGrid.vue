@@ -10,11 +10,11 @@
             <div class="flex-row">
 
               <div class="flex-box">
-
+                <img src="../assets/game.jpg">
               </div>
 
                 <div class="flex-box">
-
+                    <img src="../assets/game.jpg">
                 </div>
 
                   <div class="flex-box">
@@ -31,9 +31,9 @@
             </div>
 
             <div class="flex-row">
-                <div class="flex-box"></div>
-                  <div class="flex-box"></div>
-                    <div class="flex-box"></div>
+                <div class="flex-box"><img src="../assets/game.jpg"></div>
+                  <div class="flex-box"><img src="../assets/game.jpg"></div>
+                    <div class="flex-box"><img src="../assets/game.jpg"></div>
             </div>
 
           </div>
@@ -77,6 +77,7 @@ export default {
             {
                 gameId: 1002,
                 gameName: "Resistance: Fall of Man",
+                 imageUrl: '../assets/game.jpg'
             },
             {
                 gameId: 1003,
@@ -151,7 +152,6 @@ export default {
 
 img{
 width: 100%;
-
 }
 
 li{

@@ -49,16 +49,12 @@ p{
   /* width: 5rem; */
 
 }
-
 .mBall{
 background-image: url("../assets/8BALL.png");
-/* display: flex; */
 background-size: cover;
 width: 20rem;
 height: 20rem;
 text-align: center;
-
-
 }
 
 </style>
