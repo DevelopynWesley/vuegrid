@@ -13,27 +13,44 @@
                 <img src="../assets/game.jpg">
               </div>
 
+              <div class="flex-box">
+                  <img src="../assets/resi.jpg">
+              </div>
+
+              <div class="flex-box">
+                <img src="../assets/resi2.jpg">
+              </div>
+
+            </div>
+
+            <div class="flex-row">
+                <div class="flex-box"> 
+                  <img src="../assets/halo2.jpg">
+                </div>
+                  
                 <div class="flex-box">
-                    <img src="../assets/game.jpg">
+                  <img src="../assets/Halo3.jpeg">
+                </div>
+      
+               <div class="flex-box">
+                 <img src="../assets/kh1.jpg">
                 </div>
 
-                  <div class="flex-box">
-                    <img src="../assets/game.jpg">
-                  </div>
             </div>
 
             <div class="flex-row">
-                <div class="flex-box"> <img src="../assets/game.jpg"></div>
-                  <div class="flex-box"> <img src="../assets/game.jpg"></div>
-                    <div class="flex-box">
-                       <img src="../assets/game.jpg">
-                    </div>
-            </div>
-
-            <div class="flex-row">
-                <div class="flex-box"><img src="../assets/game.jpg"></div>
-                  <div class="flex-box"><img src="../assets/game.jpg"></div>
-                    <div class="flex-box"><img src="../assets/game.jpg"></div>
+                <div class="flex-box"> 
+                  <img src="../assets/kh2.png">
+                </div>
+                  
+                <div class="flex-box">
+                  <img src="../assets/kh28.jpg">
+                </div>
+      
+               <div class="flex-box">
+                 <img src="../assets/knack.png">
+                </div>
+                
             </div>
 
           </div>
@@ -71,13 +88,10 @@ export default {
             {
                 gameId: 1001,
                 gameName: "Halo: CE",
-                imageUrl: '../assets/game.jpg'
-
             },
             {
                 gameId: 1002,
                 gameName: "Resistance: Fall of Man",
-                 imageUrl: '../assets/game.jpg'
             },
             {
                 gameId: 1003,

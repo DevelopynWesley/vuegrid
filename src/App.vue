@@ -4,9 +4,7 @@
 
         <tr class="grid_row">
         
-            <td class= "grid_col" onclick="setTime()">
-              <Clock/>
-            </td>
+            <td class= "grid_col" onclick="setTime()"><Clock/></td>
             <td class= "grid_col"><LoginForm class="component"/></td>
             <td class= "grid_col"><Quiz/></td>
         

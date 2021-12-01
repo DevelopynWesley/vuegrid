@@ -6,7 +6,7 @@
 
               <ul class = "listNames">
         
-                <li class = "nameLi" v-bind:key="name.nameId" v-for="name in this.$root.$data.shared" >{{name.firstName}} {{name.lastName}} {{name.age}}
+                <li class = "name-li" v-bind:key="name.nameId" v-for="name in this.$root.$data.shared" >{{name.firstName}} {{name.lastName}} {{name.age}}
                   <button class="listDelButton" @click="delListItem(name)">X</button>
                 </li>
                 
@@ -26,7 +26,7 @@ export default {
 
 
   
-  name: 'NameList',
+  name: 'name-list',
 
   props: {
     namesprop: [{
@@ -112,7 +112,7 @@ export default {
   padding: 0%;
   margin: 0%;
 }
-.nameLi{
+.name-li{
   margin: 0;
   padding: 0;
 }
