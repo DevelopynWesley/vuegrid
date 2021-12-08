@@ -14,8 +14,6 @@
 </template>
 
 <script>
-
-
 export default {
   name: "addListForm",
   props: ["namesprop"],
@@ -26,10 +24,7 @@ export default {
       this.newName[0].firstName = this.newFirstName;
       this.newName[0].lastName = this.newLastName;
       this.newName[0].age = this.newAge;
-
-      // this.names.push(this.newName[0]);
-
-      this.$emit('EmitObject', this.newName[0]);
+      this.$emit("EmitObject", this.newName[0]);
     },
   },
   data: function () {

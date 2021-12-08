@@ -2,7 +2,7 @@
   <div class="login">
     <div class="input-and-label">
       <label class="texter" for="email">Enter your Email:</label>
-      <br>
+      <br />
       <input
         class="regentry"
         type="email"
@@ -82,10 +82,8 @@ export default {
   border: 1px solid black;
   width: 100%;
   text-align: center;
-  
 }
 .input-and-label {
   padding-top: 0.5rem;
 }
-
 </style>

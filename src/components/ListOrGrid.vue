@@ -2,7 +2,12 @@
   <div class="List">
     <div id="app">
       <div class="chk-holder">
-        <input type="button" class="grid-button" @click="switchGrid" v-model="ListAndGrid" />
+        <input
+          type="button"
+          class="grid-button"
+          @click="switchGrid"
+          v-model="ListAndGrid"
+        />
       </div>
       <div class="flex-container" v-show="showGrid">
         <div class="flex-row">
@@ -109,14 +114,11 @@ export default {
 
   computed: {
     ListAndGrid() {
-      
-        if(this.showGrid){
-          return 'Switch To List';
-        }
-        else{
-          return 'Switch To Grid';
-        }
-
+      if (this.showGrid) {
+        return "Switch To List";
+      } else {
+        return "Switch To Grid";
+      }
     },
   },
 
@@ -142,12 +144,12 @@ export default {
 }
 .flex-row {
   display: flex;
-   height: 33%;
-  
+  height: 33%;
+
   flex-direction: row;
   min-width: 33%;
-   min-height: 4rem;
-   max-height: 25%; 
+  min-height: 4rem;
+  max-height: 25%;
 }
 .flex-box {
   display: flex;
@@ -158,7 +160,6 @@ export default {
 }
 img {
   width: 100%;
- 
 }
 li {
   text-align: left;
@@ -169,11 +170,11 @@ li {
   flex-direction: column;
   max-height: 100%;
 }
-.List{
+.List {
   max-height: 100%;
 }
 
-.grid-button{
+.grid-button {
   width: 8rem;
 }
 </style>

@@ -24,7 +24,11 @@ export default {
     fullname: {
       // deep: true,
       handler: function () {
-        this.names.push({firstName: this.f_name, lastName: this.l_name, age: this.age});
+        this.names.push({
+          firstName: this.f_name,
+          lastName: this.l_name,
+          age: this.age,
+        });
       },
     },
   },

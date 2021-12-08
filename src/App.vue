@@ -22,7 +22,12 @@
       <tr class="grid-row">
         <td class="grid-col">
           <GridBox>
-            <NameList :f_name = "f_name" :l_name = "l_name" :age = "age" :fullname = "f_name + l_name + age"/>
+            <NameList
+              :f_name="f_name"
+              :l_name="l_name"
+              :age="age"
+              :fullname="f_name + l_name + age"
+            />
           </GridBox>
         </td>
         <td class="grid-col">
@@ -75,11 +80,9 @@ export default {
   el: "#app",
 
   props: {
-  
-        f_name: String,
-        l_name: String,
-        age: Number,
- 
+    f_name: String,
+    l_name: String,
+    age: Number,
   },
   components: {
     GridBox,
@@ -98,9 +101,6 @@ export default {
       this.f_name = event.firstName;
       this.l_name = event.lastName;
       this.age = event.age;
-       console.log(this.age);
-      // this.namesprop.push();
-       
     },
   },
 };
@@ -122,7 +122,7 @@ export default {
   display: flex;
   flex-direction: column;
 }
-.main-table{
-   background-color: navajowhite;
+.main-table {
+  background-color: navajowhite;
 }
 </style>

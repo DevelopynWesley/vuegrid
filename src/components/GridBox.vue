@@ -10,7 +10,6 @@
   border: 3px solid navajowhite;
   height: 15rem;
   width: 21rem;
-  
 }
 </style>
 

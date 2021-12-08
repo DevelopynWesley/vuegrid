@@ -38,13 +38,11 @@
     <div class="Passed" v-show="Q4 != null && Passed == false">
       <p>YOU FAILED.</p>
     </div>
-    
   </div>
 </template>
 
 <script>
 export default {
-
   name: "QuizList",
   data: function () {
     return {

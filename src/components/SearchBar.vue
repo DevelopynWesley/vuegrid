@@ -88,11 +88,9 @@ export default {
   list-style-type: none;
   border: 1px solid black;
   text-align: center;
- 
 }
 .listNames {
   padding: 0%;
-  
 }
 #app {
   flex-direction: column;
