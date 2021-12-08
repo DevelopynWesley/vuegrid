@@ -12,23 +12,6 @@
           </tr>
         </li>
       </ul>
-      <!-- <tr class="shop-row">
-        <td><input type="checkbox" v-model="items[0].check" /></td>
-        <td>SHOES</td>
-        <td>£ {{ items[0].price }}</td>
-      </tr>
-
-      <tr class="shop-row">
-        <td><input type="checkbox" v-model="items[1].check" /></td>
-        <td>BAG</td>
-        <td>£ {{ items[1].price }}</td>
-      </tr>
-
-      <tr class="shop-row">
-        <td><input type="checkbox" v-model="items[2].check" /></td>
-        <td>JEANS</td>
-        <td>£ {{ items[2].price }}</td>
-      </tr> -->
     </table>
 
     <h1>TOTAL: £{{ shopPrice }}</h1>
