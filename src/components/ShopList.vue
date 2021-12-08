@@ -3,23 +3,32 @@
     <h1>ORDER</h1>
 
     <table class="shop-table">
-      <tr class="shop-row">
+      <ul class="list-items">
+        <li class="item-li" v-bind:key="item.name" v-for="item in items">
+          <tr class="shop-row">
+            <td><input type="checkbox" v-model="item.check" /></td>
+            <td>{{ item.name }}</td>
+            <td>£ {{ item.price }}</td>
+          </tr>
+        </li>
+      </ul>
+      <!-- <tr class="shop-row">
         <td><input type="checkbox" v-model="items[0].check" /></td>
         <td>SHOES</td>
-        <td>£ {{ prcShoes }}</td>
+        <td>£ {{ items[0].price }}</td>
       </tr>
 
       <tr class="shop-row">
         <td><input type="checkbox" v-model="items[1].check" /></td>
         <td>BAG</td>
-        <td>£ {{ prcBag }}</td>
+        <td>£ {{ items[1].price }}</td>
       </tr>
 
       <tr class="shop-row">
         <td><input type="checkbox" v-model="items[2].check" /></td>
         <td>JEANS</td>
-        <td>£ {{ prcJeans }}</td>
-      </tr>
+        <td>£ {{ items[2].price }}</td>
+      </tr> -->
     </table>
 
     <h1>TOTAL: £{{ shopPrice }}</h1>
@@ -73,6 +82,16 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.item-li {
+  width: 9rem;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.list-items {
+  padding: 0;
+  margin: 0;
+}
 .shop-table {
   align-self: center;
   margin-left: 30%;
