@@ -81,6 +81,6 @@ export default {
 <style scoped>
 .Quiz {
   padding: 0%;
-  margin: 0%;
+  margin-top: 30%;
 }
 </style>
