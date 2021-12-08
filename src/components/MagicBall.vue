@@ -1,60 +1,56 @@
 <template>
-
-  <div class="mBall" @click="changeAnswer()">
-      <p >{{answer}}</p>
+  <div class="app">
+    <div class="m-ball" @click="changeAnswer()">
+      <p>{{ answer }}</p>
+    </div>
   </div>
-
 </template>
 
 <script>
-
 export default {
-  name: 'MagicBall',
+  name: "MagicBall",
 
-   methods: {
-      
-        changeAnswer(){
-          let rand = Math.floor(Math.random() * this.answers.length)
-          this.answer = this.answers[rand];
-        }
-
-      },
-
-  data: function(){
-     return {
-       answer: "",
-       answers:[
-                "Don't Count on it.",
-                "Looks Likely",
-                "Maybe",
-                "I don't know.",
-                "Yes",
-                "No",
-                "Can you repeat the question?"
-         ],
-         
-     }
+  methods: {
+    changeAnswer() {
+      let rand = Math.floor(Math.random() * this.answers.length);
+      this.answer = this.answers[rand];
+    },
   },
- 
-}
+
+  data: function () {
+    return {
+      answer: "",
+      answers: [
+        "Don't Count on it.",
+        "Looks Likely",
+        "Maybe",
+        "I don't know.",
+        "Yes",
+        "No",
+      ],
+    };
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-p{
-  min-height: 2rem;
+p {
   color: white;
-  padding-top: 7rem;
-  padding-bottom: 9rem;
-  /* width: 5rem; */
-
+  padding-top: 6rem;
+  padding-bottom: 5rem;
+  font-size: 11px;
 }
-.mBall{
-background-image: url("../assets/8BALL.png");
-background-size: cover;
-width: 20rem;
-height: 20rem;
-text-align: center;
+.m-ball {
+  background-image: url("../assets/8BALL.png");
+  background-size: contain;
+  width: 15rem;
+  height: 15rem;
+  text-align: center;
 }
-
+.app {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
 </style>

@@ -1,121 +1,98 @@
 <template>
   <div class="List">
-     <tr class="grid-row">
-        
-            <td class="grid_col">
-
-              <ul class = "listNames">
-        
-                <li class = "name-li" v-bind:key="name.nameId" v-for="name in this.$root.$data.shared" >{{name.firstName}} {{name.lastName}} {{name.age}}
-                  <button class="listDelButton" @click="delListItem(name)">X</button>
-                </li>
-                
-              </ul>
-              
-            </td>
-
-        </tr>
-
+    <ul class="list-names">
+      <li class="name-li" v-bind:key="name.nameId" v-for="name in names">
+        {{ name.firstName }} {{ name.lastName }} {{ name.age }}
+        <button class="rem-button" @click="delListItem(name)">X</button>
+      </li>
+    </ul>
   </div>
-
 </template>
 
 <script>
-
 export default {
-
-
-  
-  name: 'name-list',
+  name: "name-list",
 
   props: {
-    namesprop: [{
-      f_name: String,
-      l_name: String,
-      age: Number
-    }]
+    f_name: String,
+    l_name: String,
+    age: Number,
+    fullname: String,
   },
 
-  
-  data: function(){
-     return {
-         visible: false,
-         filterstring: "",
+  watch: {
+    fullname: {
+      // deep: true,
+      handler: function () {
+        this.names.push({firstName: this.f_name, lastName: this.l_name, age: this.age});
+      },
+    },
+  },
 
-         newName:[{
-           nameId: 0,
-           firstName: "1",
-           lastName: "2",
-           age: 25
-         }],
-         
-         names: [
-            {
-                 nameId: 1001,
-                 firstName: "Wesley",
-                 lastName: "Barrett",
-                 age: 27   
+  data: function () {
+    return {
+      filterstring: "",
 
-            },
-            {
-                nameId: 1002,
-                firstName: "Lewis",
-                lastName: "Howl", 
-                age: 26
-            }
-        ],
-     }
+      newName: [
+        {
+          nameId: 0,
+          firstName: "1",
+          lastName: "2",
+          age: 25,
+        },
+      ],
+
+      names: [
+        {
+          nameId: 1001,
+          firstName: "Wesley",
+          lastName: "Barrett",
+          age: 27,
+        },
+        {
+          nameId: 1002,
+          firstName: "Lewis",
+          lastName: "Howl",
+          age: 26,
+        },
+      ],
+    };
   },
 
   methods: {
-    checkForm() {
-      this.visible = true;
-      },
-
-      delListItem(id){
-        let index = this.names.map(id => id.nameId).indexOf(id)
-        this.$root.$data.shared.splice(index, 1)
-      },
-
-      updateData(variable) {
-
-        this.newName[0].nameId = 2323;
-        this.newName[0].firstName = variable[0];
-        this.newName[0].lastName = variable[1];
-        this.newName[0].age = variable[2]
-
-        this.names.push(this.newName[0]);
-
-
-
-       let vari = variable;
-       console.log(vari);
-      } 
+    delListItem(id) {
+      let index = this.names.map((id) => id.nameId).indexOf(id);
+      this.names.splice(index, 1);
+    },
   },
-
-   watch: {
-    namesprop: function() {
-      this.names.push(this.namesprop);
-      console.log("watched");
-    }
-  }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.List{
-    justify-content: center;    
-}
-.listNames{
+.List {
+  justify-content: center;
   padding: 0%;
   margin: 0%;
+  height: 7rem;
+  max-height: 100%;
 }
-.name-li{
+.list-names {
+  padding: 0%;
+  margin: 0%;
+  list-style-type: none;
+}
+.name-li {
   margin: 0;
-  padding: 0;
+  padding-bottom: 0.1rem;
+  padding-top: 0.1rem;
 }
-.grid-row{
-  height: 5rem;
+li {
+  width: inherit;
+  list-style-type: none;
+}
+.rem-button {
+  text-align: right;
+  float: right;
 }
 </style>

@@ -1,54 +1,88 @@
 <template>
   <div id="app" class="main_app">
-    <table class="main_table">
-
-        <tr class="grid_row">
-        
-            <td class= "grid_col" onclick="setTime()"><Clock/></td>
-            <td class= "grid_col"><LoginForm class="component"/></td>
-            <td class= "grid_col"><Quiz/></td>
-        
-        
-        </tr>
-        <br>
-        <tr class="grid_row">
-        
-            <td class= "grid_col"><NameList class="NameList"/></td>
-            <td class= "grid_col"><AddToListForm/></td>
-            <td class= "grid_col"><ShopList/></td>
-        
-        </tr>
-        <br>
-        <tr class="grid_row">
-        
-            <td class= "grid_col"><SearchBar/></td>
-            <td class= "grid_col"><ListOrGrid/></td>
-            <td class= "grid_col"><Ball/></td>
-        
-        </tr>
-        
-        
+    <table class="main-table">
+      <tr class="grid-row">
+        <td class="grid-col">
+          <GridBox class="grid-box">
+            <Clock />
+          </GridBox>
+        </td>
+        <td class="grid-col">
+          <GridBox class="grid-box">
+            <LoginForm />
+          </GridBox>
+        </td>
+        <td class="grid-col">
+          <GridBox>
+            <Quiz />
+          </GridBox>
+        </td>
+      </tr>
+      <br />
+      <tr class="grid-row">
+        <td class="grid-col">
+          <GridBox>
+            <NameList :f_name = "f_name" :l_name = "l_name" :age = "age" :fullname = "f_name + l_name + age"/>
+          </GridBox>
+        </td>
+        <td class="grid-col">
+          <GridBox>
+            <AddToListForm @EmitObject="PostChange" />
+          </GridBox>
+        </td>
+        <td class="grid-col">
+          <GridBox>
+            <ShopList />
+          </GridBox>
+        </td>
+      </tr>
+      <br />
+      <tr class="grid-row">
+        <td class="grid-col">
+          <GridBox>
+            <SearchBar />
+          </GridBox>
+        </td>
+        <td class="grid-col">
+          <GridBox>
+            <ListOrGrid />
+          </GridBox>
+        </td>
+        <td class="grid-col">
+          <GridBox>
+            <Ball />
+          </GridBox>
+        </td>
+      </tr>
     </table>
-  </div>  
+  </div>
 </template>
 
 <script>
-
-import SearchBar from './components/SearchBar.vue'
-import LoginForm from './components/LoginForm.vue'
-import NameList from './components/List.vue'
-import AddToListForm from './components/AddToListForm.vue'
-import Clock from './components/Clock.vue'
-import ShopList from './components/ShopList.vue'
-import ListOrGrid from './components/ListOrGrid.vue'
-import Quiz from './components/Quiz.vue'
-import Ball from './components/MagicBall.vue';
+import SearchBar from "./components/SearchBar.vue";
+import LoginForm from "./components/LoginForm.vue";
+import NameList from "./components/List.vue";
+import AddToListForm from "./components/AddToListForm.vue";
+import Clock from "./components/Clock.vue";
+import ShopList from "./components/ShopList.vue";
+import ListOrGrid from "./components/ListOrGrid.vue";
+import Quiz from "./components/Quiz.vue";
+import Ball from "./components/MagicBall.vue";
+import GridBox from "./components/GridBox.vue";
 
 export default {
-  name: 'App',
-  el: '#app',
+  name: "App",
+  el: "#app",
+
+  props: {
+  
+        f_name: String,
+        l_name: String,
+        age: Number,
+ 
+  },
   components: {
-    // HelloWorld
+    GridBox,
     SearchBar,
     LoginForm,
     NameList,
@@ -57,32 +91,38 @@ export default {
     ShopList,
     ListOrGrid,
     Quiz,
-    Ball
+    Ball,
   },
-
-  data(){
-
-},
-
-}
+  methods: {
+    PostChange(event) {
+      this.f_name = event.firstName;
+      this.l_name = event.lastName;
+      this.age = event.age;
+       console.log(this.age);
+      // this.namesprop.push();
+       
+    },
+  },
+};
 </script>
 
 <style>
 #app {
-  display: grid;
+  display: flex;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   text-align: center;
   color: #2c3e50;
-  width: 21rem;  
+  width: 100%;
+  justify-content: center;
 }
-.main_table{
-  min-height: 33%;
+.grid-col {
+  border: 3px solid black;
 }
-.grid_col{
-  /* min-height: 33%; */
-  width: 5rem;
-  max-width: 25rem;
-  min-width: 25rem;
+.component {
+  display: flex;
+  flex-direction: column;
 }
-
+.main-table{
+   background-color: navajowhite;
+}
 </style>

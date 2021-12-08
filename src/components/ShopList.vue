@@ -1,27 +1,30 @@
 <template>
-  <div class="shopList">
-      <h1>ORDER</h1>
-     
-     <table>
 
-       <tr>
-         <td> <input type="checkbox" v-model="chkShoes"/>
-         <td>SHOES</td>       
-       </tr>
+  <div class="shop-list">
+    <h1>ORDER</h1>
 
-         <tr>
-         <td> <input type="checkbox" v-model="chkBag"/>
-         <td>BAG</td>       
-       </tr>
+    <table class="shop-table">
+      <tr class="shop-row">
+        <td><input type="checkbox" v-model="chkShoes" /></td>
+        <td>SHOES</td>
+        <td>£ {{ prcShoes }}</td>
+      </tr>
 
-       <tr>
-         <td> <input type="checkbox" v-model="chkJeans"/>
-         <td>JEANS</td>       
-       </tr>
+      <tr class="shop-row">
+        <td><input type="checkbox" v-model="chkBag" /></td>
+        <td>BAG</td>
+        <td>£ {{ prcBag }}</td>
+      </tr>
 
-     </table>
+      <tr class="shop-row">
+        <td><input type="checkbox" v-model="chkJeans" /></td>
+        <td>JEANS</td>
+        <td>£ {{ prcJeans }}</td>
+      </tr>
+    </table>
 
-     <h1>TOTAL: £{{orderPrice}}</h1>
+    <h1>TOTAL: £{{ orderPrice }}</h1>
+
   </div>
 </template>
 
@@ -72,4 +75,27 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.shop-table {
+  align-self: center;
+  margin-left: 30%;
+  width: 40%;
+}
+.shop-row {
+  text-align: center;
+  border: 3px solid black;
+}
+tr {
+  border: 3px solid blue;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+}
+td{
+  text-align: left;
+
+}
+/* td{
+  text-align: center;
+  border: 1px solid aqua;
+} */
 </style>
